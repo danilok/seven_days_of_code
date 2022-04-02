@@ -35,7 +35,7 @@ async function desafioDia3() {
   });
 
   rl.on('close', function () {
-    console.log('\nSee you next time !!!');
+    console.log('\nAté a próxima !!!');
     process.exit(0);
   });
 
@@ -51,11 +51,24 @@ async function desafioDia3() {
       neg: ['nao', 'nenhuma', 'n'],
       pos: ['sim', 'ok', 's'],
       techs: ['c', 'c++', 'python', 'go', 'golang', 'node', 'docker', 'devops', 'html', 'css', 'angular']
-    }
+    },
+  }
+  const techComments = {
+    c: 'Essa linguagem é raiz!', 
+    'c++': 'Isso me lembra muito OO',
+    python: 'Uma linguagem muito interessante!',
+    go: 'Parece uma boa linguagem',
+    golang: 'Parece uma boa linguagem',
+    node: 'Uma tecnologia bem útil!', 
+    docker: 'Container é vida',
+    devops: 'Necessário!',
+    html: 'Conhecimento básico para todo front-end', 
+    css: 'Muitos experimentos pela frente',
+    angular: 'Bora aprender mais esse framework front-end'
   }
 
   /**
-   * 
+   * Você quer seguir para área de Front-End ou seguir para a área de Back-End?
    * @returns F|B
    */
   async function firstQuestion() {
@@ -118,16 +131,16 @@ async function desafioDia3() {
       validateAnswer(res);
       return res;
     }
-    // let answers = await handleMultipleQueries(question, q4, verifyAnswer);
     let answers = [];
     let answer = await handleQuery(question, q4, verifyAnswer);
     const abort = validAnswers.q4.neg.includes(answer);
     if (abort) {
       return [];
     }
+    printTechComment(answer, techComments);
     answers.push(answer);
     
-    await handleMultipleQueries(question, validAnswers, answers);
+    await handleMultipleQueries(question, validAnswers, techComments, answers);
     return answers;
   }
   const answer4 = await fourthQuestion();
@@ -184,7 +197,7 @@ async function handleKeepAsking(question, more, validAnswers) {
   return validAnswers.q4.pos.includes(answer.toLowerCase());
 }
 
-async function handleMultipleQueries(question, validAnswers, answers) {
+async function handleMultipleQueries(question, validAnswers, techComments, answers) {
   const verifyAnswer = (answer) => {
     const lower = answer.toLowerCase();
     const acceptedRange = validAnswers.q4.techs;
@@ -197,6 +210,7 @@ async function handleMultipleQueries(question, validAnswers, answers) {
   const more = getQuestion4More();
   while (await handleKeepAsking(question, more, validAnswers)) {
     const answer = await handleQuery(question, q4, verifyAnswer);
+    printTechComment(answer, techComments);
     answers.push(answer);
   }
 }
@@ -217,4 +231,8 @@ function validateAnswer(res) {
   if (!res) {
     console.log('> Desculpe, mas esta resposta é inválida! :(');
   }
+}
+
+function printTechComment(tech, techComments) {
+  console.log(techComments[tech]);
 }
