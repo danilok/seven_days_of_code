@@ -5,7 +5,8 @@
 - [3/7: Fluxo de decisão](#37-fluxo-de-decisão)
 - [4/7: 👩🏽‍💻 Mais loops e randomização](#47-👩🏽‍💻-mais-loops-e-randomização)
 - [5/7: Arrays e coleções](#57-arrays-e-coleções)
-
+- [6/7: 👩🏽‍💻 Remoção de Arrays](#67-👩🏽‍💻-remoção-de-arrays)
+- [7/7: Funções em Javascript](#77-funções-em-javascript)
 # 1/7: Operações Booleanas
 
 Você vai começar a sua jornada no #7DaysOfCode ;)
@@ -405,6 +406,56 @@ Para aprender mais sobre métodos para arrays no Javascript, dê uma olhada ness
 Lembre-se que você pode sempre personalizar o seu programinha da maneira que achar melhor, e não se esqueça de compartilhá-lo no seu GitHub e nas suas redes sociais com a hashtag #7DaysOfCode, e também com #feedback7DoC caso você precise de alguma ajuda.
 
 O último desafio te aguarda amanhã!
+
+Rafa Ballerini  
+Instrutora Front-End na Alura
+
+# 7/7: Funções em Javascript
+
+Esta foi uma semana e tanto, né?
+
+Você praticou muita coisa sobre lógica de programação com Javascript, mas ainda falta uma coisa muito importante: organizar o seu código.
+
+E sim, isso é algo obrigatório para aprender como pessoa desenvolvedora, pois uma hora ou outra na sua carreira você vai precisar dar manutenção no seu código criado, ou até ajeitar algo no código que outra pessoa escreveu.
+
+Imagina só se esse código estiver todo bagunçado?
+
+Uma ótima prática é sempre separar cada trecho do seu código que realizará alguma função específica em blocos de código ainda menores, que poderão ser reutilizados e chamados a qualquer outro momento ao longo do seu programa. São as chamadas funções.
+
+Para o exercício de hoje: você já parou para pensar como uma calculadora funciona?
+
+Ela pede para você digitar um número, depois você seleciona um tipo de operação, um outro número, e ela faz sozinha o cálculo para te mostrar o resultado! Incrível, né?
+
+Neste último desafio, a minha proposta para você é: crie a sua própria calculadora, porém com um detalhe muito importante: cada operação deverá ser uma função diferente no seu código.
+
+Primeiramente, a pessoa deverá escolher uma opção de operação impressa pelo programa na tela.
+
+Depois, ela deverá inserir os dois valores que deseja utilizar, e o programa imprimirá o resultado da operação em questão.
+
+As opções disponíveis deverão ser: soma, subtração, multiplicação, divisão, e sair. Nessa última, o programa deverá parar de ser executado, mostrando uma mensagem "Até a próxima".
+
+## DICA
+
+Cada operação deverá ter uma função diferente no seu código, que receberá os valores inseridos como parâmetros e retornará com o resultado da operação.
+
+Não esqueça de usar estruturas de repetição para fazer a calculadora imprimir a escolha de operação até que a pessoa deseje parar o programa.
+
+Lembre-se também de que, além do if e else, também temos o switch, muito interessante de se utilizar em casos como esse, de múltipla escolha.
+
+Personalize a sua calculadora da maneira que achar mais legal, e não se esqueça de compartilhá-la no seu GitHub e nas suas redes sociais com a hashtag #7DaysOfCode, e também com #feedback7DoC caso você precise de alguma ajuda.
+## EXTRA
+
+Para aprender mais sobre funções em Javascript, dê uma olhada nesse site.
+
+Caso ainda não tenha estudado sobre o switch também, confira esse site.
+
+Nem acredito que chegamos no final desta jornada!
+
+Espero que você tenha aproveitado tanto quanto eu.
+
+Em breve vou te enviar um formulário para saber o que você achou desses desafios, se tem algum comentário ou alguma sugestão.
+
+Obrigada pela companhia e bom trabalho!
 
 Rafa Ballerini  
 Instrutora Front-End na Alura
